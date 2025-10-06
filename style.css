@@ -1,0 +1,239 @@
+
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: "Cairo", sans-serif;
+}
+body {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    background: #f5f5f5; 
+    transition: 0.3s;
+}
+body.dark {
+    background: #1e1e1e; 
+    color: #eee;
+}
+button , input::placeholder , h1 , .task-counter{
+    text-transform: capitalize;
+}
+
+/*----------------------------------*/
+.container {
+  background: #fff; 
+  width: 90%; 
+  max-width: 500px; 
+  padding: 20px; 
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1); 
+  transition: 0.3s;
+}
+body.dark .container {
+    background: #2a2a2a;
+}
+
+h1 {
+    text-align: center; 
+    margin-bottom: 20px; 
+    color: #2e4e3f;
+}
+body.dark h1 {
+    color: #9acd8c;
+}
+
+/*--------------------------------------*/
+.input-section, .search-section {
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 15px;
+}
+.input-section input, .search-section input {
+    flex: 1;
+    padding: 10px; 
+    border: 2px solid #2e4e3f;
+    border-radius: 8px; 
+    outline: none;
+}
+body.dark input {
+    background: #3b3b3b; 
+    border-color: #9acd8c; 
+    color: #eee;
+}
+.input-section button {
+  background: #2e4e3f; 
+  color: #fff; 
+  border: none; 
+  padding: 10px 20px; 
+  border-radius: 8px; 
+  cursor: pointer;
+}
+.input-section button:hover {
+    background: #3b6750;
+}
+
+/*----------------------------------------*/
+.filters {
+    display: flex; 
+    justify-content: space-between; 
+    margin-bottom: 15px;
+}
+.filters button {
+    flex: 1; 
+    margin: 0 5px; 
+    padding: 8px; 
+    border-radius: 8px; 
+    border: none; 
+    background: #eee; 
+    cursor: pointer;
+}
+.filters button.active {
+    background: #2e4e3f; 
+    color: #fff;
+}
+body.dark .filters button {
+    background: #444; 
+    color: #eee;
+}
+body.dark .filters button.active {
+    background: #9acd8c; 
+    color: #222;
+}
+
+/*------------------------------------------*/
+.task-counter {
+    text-align: center; 
+    margin-bottom: 15px; 
+    font-weight: bold; 
+    color: #2e4e3f;
+}
+body.dark .task-counter {
+    color: #9acd8c;
+}
+
+/*------------------------------------------*/
+ul {
+    list-style: none;
+}
+ul li {
+  background: #f0f0f0; 
+  margin-bottom: 10px; 
+  padding: 12px; 
+  border-radius: 10px; 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
+ul li.completed {
+    text-decoration: line-through; 
+    background: #d1e0d1; 
+    color: #555;
+}
+body.dark ul li {
+    background: #3a3a3a; 
+    color: #eee;
+}
+body.dark ul li.completed {
+    background: #2f4f2f; 
+    color: #bbb;
+}
+
+/*----------------------------------------------*/
+.actions {
+    display: flex; 
+    gap: 6px;
+}
+.actions button {
+    border: none; 
+    padding: 6px 10px; 
+    border-radius: 6px; 
+    cursor: pointer;
+}
+.delete-btn {
+    background: #e74c3c; 
+    color: white;
+}
+.done-btn {
+    background: #27ae60; 
+    color: white;
+}
+.edit-btn {
+    background: #f39c12; 
+    color: white;
+}
+
+/*-----------------------------------*/
+.clear-section {
+    margin-top: 15px; 
+    display: flex; 
+    justify-content: space-between;
+}
+.clear-btn, .mode-btn {
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer; 
+  transition: 0.3s;
+}
+.clear-btn {
+    background: #e74c3c; 
+    color: #fff;
+}
+.mode-btn {
+    background: #2e4e3f; 
+    color: #fff;
+}
+
+/*----------------------------------------*/
+.modal {
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background: rgba(0,0,0,0.5); 
+  display: none; 
+  justify-content: center; 
+  align-items: center;
+}
+.modal-content {
+  background: #fff; 
+  padding: 20px; 
+  border-radius: 12px; 
+  width: 90%; 
+  max-width: 400px; 
+  text-align: center;
+}
+body.dark .modal-content {
+    background: #2a2a2a; 
+    color: #eee;
+}
+.modal-content input {
+  width: 90%; 
+  padding: 8px; 
+  margin-bottom: 10px; 
+  border-radius: 6px; 
+  border: 2px solid #2e4e3f;
+}
+.modal-buttons {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-top: 10px;
+}
+.modal-buttons button {
+    padding: 8px 15px; 
+    border: none; 
+    border-radius: 6px; 
+    cursor: pointer;
+}
+.confirm-btn {
+    background: #27ae60; 
+    color: white;
+}
+.cancel-btn {
+    background: #e74c3c; 
+    color: white;
+}
