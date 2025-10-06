@@ -22,3 +22,4 @@ Includes a dark mode, task editing, search, and confirmation modals for full use
 - Vanilla JavaScript (ES6+) – Core functionality and interactivity.
 - LocalStorage API – Persistent data storage in the browser.
 
+
